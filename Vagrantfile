@@ -30,4 +30,8 @@ Vagrant.configure("2") do |config|
     /usr/local/bin/reload-terramino
   SHELL
 
+  # Forward ports for Terramino (8081 for frontend, 8080 for backend)
+  config.vm.network "forwarded_port", guest: 8080, host: 8080
+  config.vm.network "forwarded_port", guest: 8081, host: 8081
+
 end
