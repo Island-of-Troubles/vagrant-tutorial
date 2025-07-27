@@ -34,4 +34,7 @@ Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 8080, host: 8080
   config.vm.network "forwarded_port", guest: 8081, host: 8081
 
+  # Sync the terramino-go directory
+  config.vm.synced_folder "./terramino-go", "/home/vagrant/terramino-go", create: true
+
 end
