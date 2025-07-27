@@ -2,6 +2,14 @@
 Vagrant is a CLI utility for managing virtual machines.
 It connects to a provider (e.g. VirtualBox, AWS) to provision and configure reproducible development environments using a simple `Vagrantfile` (similar to a `Dockerfile` or `docker-compose.yml`).
 
+## Basic concepts
+
+- **Box**: a base image used to create the virtual machine. Boxes are reusable, shareable, and versioned. You can find public boxes on [Vagrant Cloud](https://app.vagrantup.com/boxes/search).
+- **Provider**: the underlying system that runs the VM. Common providers are VirtualBox, VMware, and Docker.
+- **Provisioning**: the process of setting up the VM after it's created. You can install packages, run scripts, or configure services.
+- **Provisioner**: the tool used to provision the VM. Vagrant supports several, including Shell, Ansible, Puppet, and Chef.
+- **Synced folders**: a way to share files between your host machine and the VM. By default, the project folder is mounted inside the VM.
+
 ## Main commands
 
 - `vagrant init hashicorp-education/ubuntu-24-04 --box-version 0.1.0` - creates a basic Vagrantfile
